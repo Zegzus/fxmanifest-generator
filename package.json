@@ -1,0 +1,55 @@
+{
+  "name": "fxmanifest-generator",
+  "displayName": "FXManifest generator",
+  "description": "Simple extension which should generate fxmanifest  with some customization in settings -- inspired by RevegeBack_",
+  "name": "fxmanifest-generator",
+  "icon": "img/img.png",
+  "publisher": "zegzus",
+  "author": {
+    "name": "zegzus",
+    "url": "https://github.com/zegzus"
+  },
+  "license": "GNU General Public License v3.0",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/zegzus/fxmanifest-generator.git"
+  },
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.50.0" 
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:lua"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "fxmanifest-generator",
+      "properties": {
+        "luaFxgen.author": {
+          "type": "string",
+          "default": "",
+          "description": "script author"
+        },
+        "luaFxgen.game": {
+          "type": "string",
+          "default": "gta5",
+          "description": "game"
+        },
+        "luaFxgen.version": {
+          "type": "string",
+          "default": "1.0.0",
+          "description": "script version"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "lua",
+        "extensions": [".lua"],
+        "aliases": ["Lua"]
+      }
+    ]
+  }
+}
