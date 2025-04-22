@@ -14,7 +14,7 @@
   "type": "git",
   "url": "https://github.com/zegzus/fxmanifest-generator.git"
   },
-  "version": "1.0.1",
+  "version": "1.1.0",
   "engines": {
     "vscode": "^1.50.0" 
   },
@@ -30,17 +30,38 @@
         "fxmanifest-generator.author": {
           "type": "string",
           "default": "",
-          "description": "script author"
+          "description": "script author",
+          "scope": "resource"
         },
         "fxmanifest-generator.game": {
           "type": "string",
           "default": "gta5",
-          "description": "game"
+          "description": "game",
+          "scope": "resource"
         },
         "fxmanifest-generator.version": {
           "type": "string",
           "default": "1.0.0",
-          "description": "default startup script version"
+          "description": "default startup script version",
+          "scope": "resource"
+        },
+        "fxmanifest-generator.fx_version": {
+          "type": "string",
+          "default": "cerulean",
+          "description": "default fxmanifest version",
+          "scope": "resource"
+        },
+        "fxmanifest-generator.escrow_ignore": {
+          "type": "boolean",
+          "default": false,
+          "description": "add escrow_ignore to fxmanifest",
+          "scope": "resource"
+        },
+        "fxmanifest-generator.import_ox": {
+          "type": "boolean",
+          "default": false,
+          "description": "imports ox_lib by default",
+          "scope": "resource"
         }
       }
     },
